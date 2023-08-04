@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>Top Level Heading</h1>
+    <section>
+    <h2>Section Heading</h2>
+    <p id="red">Section paragraph</p>
+    <a class="orange" href="https://google.com">Google</a>
+    <a class="orange" href="https://facebook.com">Facebook</a>
+    <a class="orange" href="https://netflix.com">Netflix</a>
+  
+    </section>
+    <footer>
+      <h2>Footer Heading</h2>
+      <p>Footer paragraph</p>
+      <div>
+        <p>Div paragraph</p>
+      </div>
+    </footer>
+</body>
+</html>
+
+Selector
+A pattern used at the beginning of a ruleset for choosing which elements will be affected by the declarations.
+There are a variety of different selector types:
+
+• Type selector: Selects all of the elements of a specific HTML tag. For example, h1 would select all <h1> elements.
+h1{
+  color:red;
+}
+
+• Class selector
+.orange{
+color:orange;
+}
+
+• ID selector
+.red{
+color:red;
+}
+
+Attribute selector
+------------------
+Selects all elements with a specific HTML attribute set to a specific value. Theese are surrounded by [] and use a  as a delimiter
+between the attribute name and value. For example,[type="submit"] would select all elements with a type attribute set to submit
+
+Attribute selectors can also use special syntax for basic pattern matching within the value.There are variety of options
+but some of the common one are
+
+[href*="google.com"] - Selects all elements with an href attribute with the text"google.com" at any location
+                     example <link href="www.gxp.com/www.google.com">
+
+[href$="google.com"] - Selects all elements with an href attribute with the text"google.com" at the end location
+                     example <link href="www.gxp.com/www.google.com">
+
+[href^="google.com"] - Selects all elements with an href attribute with the text"google.com" at the start location
+                     example <link href="www.google.com/posts">
+
+example
+--------
+[href^="google.com"] {
+color:green;
+}
+
+a[href^="google.com"] {
+color:green;
+}  Selects all elements with an href attribute with the text"google.com" at the start location
+                     example <link href="www.google.com/posts"> under an anchor tag
+
+Combinators
+----------
+Descendant combinator:
+Represented by a single space, in the format selector1 selector2. selects all elements that match selector2 and are a descendant
+of an element matching selector1. A descendant does not need to be a direct child(eg the selected elements grandparent could match selector1)
+example: A paragraph inside of a footer
+
+footer p {
+color:red;
+}
+
+child combinator: Represented by >, in the format selector1 > selector2. selects all elements that match selector2 and a direct
+child of an element matching selector 1
+
+footer > p {
+color:red;
+}
+sibling combinator: Represented by ~, in the format selector1 ~ selector2. selects all elements that match selector2 and are a
+sibling of element matching selector1. The element matching selector2 must come after the element matching selector1
+
+footer ~ p {
+color: red;
+}
+
+Adjacent sibling combinator: Represented by +, in the format selector1 + selector2. selects all elements that match selector2 and have
+an element matching selector 1 directly before them in the DOM
+
+a + p {
+color:red;
+}
