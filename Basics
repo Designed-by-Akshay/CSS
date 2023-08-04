@@ -1,0 +1,24 @@
+StyleSheets are grouped into three main categories:
+1.User Agent StyleSheets: Contain browser defaults for styles, these get the lowest level of precedence.
+2. User Stylesheets: Contain user preference saved in the browser, which override user agent stylesheets.
+3.Author Stylesheets: Contains the CSS Code  we write, these get the highest level of precedence(assuming !important has not been used)
+
+Declaration
+-----------
+A CSS property-value pair is in the form property:value;
+
+Ruleset
+---------------
+selector(element) {
+  property:value;
+  property:value;
+}
+
+<link>
+properties:
+rel. The relation to the other document .For CSS files this should be stylesheet.
+href: The path to the linked file. relative or absolute
+
+usage:
+in the HTML Page we write <link rel="stylesheet",href="styles.css">
+
