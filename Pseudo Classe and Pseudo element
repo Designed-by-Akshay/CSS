@@ -1,0 +1,39 @@
+Pseudo Class
+-------------
+An addition to a CSS selector for selecting based on the current state of the element. 
+These start with :  so for example
+                            button: hover
+would select buttons currently hovered over.
+
+Pseudo Element
+--------------
+An addition to a CSS selector for selecting a specific portion of the element. 
+These start with ::. So for example
+p:: first-letter would select the first letter of the paragraph.
+
+:: before and ::after are speocial pseudo elements that insert children before or after the content of the element
+allowing for stying before or after the content. This  is oftentimes used with CSS content property but not always.
+
+p::before {
+content: ">";
+}
+p::after {
+content:"!"
+}
+
+p::first-letter {
+font-size: 2em;
+}
+
+input: focus {
+outline: 2px solid blue;
+}
+input: invalid:not(:focus) {
+outline: 2px solid red;
+}
+a:link {
+color: red;
+}
+a:visited {
+color: green;
+}
