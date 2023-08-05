@@ -1,0 +1,11 @@
+What happens to conflicting decalrations
+--------------------------------------
+Most specific selector is used
+
+Inline Styles: 1000
+• IDs: 100
+• Classes: 10
+• Pseudo-Classes: 10
+• Attributes: 10
+• Elements: 1
+• Pseudo-Elements: 1
